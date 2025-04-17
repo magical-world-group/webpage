@@ -25,7 +25,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 1rem;
     }
@@ -37,8 +37,9 @@
 
     p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 800px;
       margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
     .join-btn {
@@ -56,9 +57,35 @@
       background: #a74fda;
     }
 
+    .section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+    }
+
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .role {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     footer {
-      position: absolute;
-      bottom: 10px;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #ccc;
     }
@@ -72,6 +99,56 @@
       <button class="join-btn">今すぐ参加する</button>
     </a>
   </div>
+
+  <div class="section">
+    <h2>世界観</h2>
+    <p>
+      魔幻世界は1850年を舞台とした近代的なハイファンタジー。<br />
+      魔法と技術が共存し、混沌とした思想が渦巻く中にも一定の調和が保たれている世界です。<br />
+      四つの地域大国がひしめき合い、それぞれの信念や文化が入り混じる摩訶不思議な時代が広がっています。
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>主要勢力</h2>
+    <p>
+      この世界には、ギルド的なものは存在しません。<br />
+      しかし「世界なんちゃら機関」と呼ばれる、全世界的な観測と調停を担う組織が暗躍しているという噂も。<br />
+      冒険者や研究者たちが各地で情報を集め、機関の真実に迫ろうとしています。
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>役職と分野</h2>
+    <div class="roles">
+      <div class="role">⛰️ 地理</div>
+      <div class="role">🪐 天文</div>
+      <div class="role">🌊 海洋</div>
+      <div class="role">🏮 文化</div>
+      <div class="role">🔫 軍事</div>
+      <div class="role">🗾 国家</div>
+      <div class="role">🏛️ 歴史</div>
+      <div class="role">🐶 生物</div>
+      <div class="role">💬 言語</div>
+      <div class="role">🎋 民族</div>
+      <div class="role">🎵 音楽</div>
+      <div class="role">🔯 魔法</div>
+      <div class="role">⚔️ 冒険者（見学者）</div>
+      <div class="role">🪄 魔法使い（創作者）</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>開発者コメント</h2>
+    <p>
+      「魔幻世界」は、1850年という近代と魔法が交差する時代背景を元に、<br />
+      技術と魔力がせめぎ合う混沌と調和のバランスを描きたくて作りはじめました。<br />
+      世界観に“ギルド”が存在しないのも、個人や国家の動きが重視される時代性を意識してのことです。<br />
+      Discordを通して、皆さんと一緒にこの世界をもっと深く、楽しく広げていけたらと思っています。<br />
+      — 制作チーム一同
+    </p>
+  </div>
+
   <footer>© 2025 魔幻世界 All rights reserved.</footer>
 </body>
 </html>
