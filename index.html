@@ -12,12 +12,28 @@
       background: linear-gradient(120deg, #1c0033, #2b0055, #40007a);
       background-size: 600% 600%;
       animation: gradientBG 15s ease infinite;
+      overflow-x: hidden;
     }
 
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
     }
 
     .container {
@@ -28,6 +44,8 @@
       min-height: 100vh;
       text-align: center;
       padding: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -63,6 +81,8 @@
       padding: 1rem;
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 12px;
+      position: relative;
+      z-index: 1;
     }
 
     .roles {
@@ -88,10 +108,26 @@
       padding: 1rem;
       font-size: 0.9rem;
       color: #ccc;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+  <script>
+    const STAR_COUNT = 100;
+    for (let i = 0; i < STAR_COUNT; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.width = `${Math.random() * 2 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      document.body.appendChild(star);
+    }
+  </script>
+
   <div class="container">
     <h1>魔幻世界</h1>
     <p>ようこそ、幻想と魔法が交差する世界へ。<br />冒険者たちが集い、語り、そして戦う場所。</p>
